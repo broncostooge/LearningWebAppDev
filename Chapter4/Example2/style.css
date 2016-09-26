@@ -1,7 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
 
 body {
     width: 855px;
@@ -62,25 +58,43 @@ main {
   margin-left: 5px;
 }
 
-.comments {
+.comments_one {
   float: right;
   width: 570px;
 }
 
-.comments p {
+.comments_one p {
   padding: 5px;
   margin-bottom: 10px;
   border-radius: 5px;
 }
 
-.comments p:nth-child(even) {
+.comments_two {
+  float: right;
+  width: 570px;
+}
+
+.comments_two p {
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.comments_one p:nth-child(even) {
     background: lavender;
 }
 
-.comments p:nth-child(odd) {
+.comments_one p:nth-child(odd) {
     background: gainsboro;
 }
 
+.comments_two p:nth-child(even) {
+    background: red;
+}
+
+.comments_two p:nth-child(odd) {
+    background: blue;
+}
 footer {
     font-size: smaller;
     margin-top: 5px;
