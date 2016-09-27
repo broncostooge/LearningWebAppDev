@@ -2,25 +2,47 @@
 var main = function () {
     "use strict";
 
-    var addCommentFromInputBox = function () {
+    var addCommentFromInputBoxOne = function () {
         var $new_comment;
 
         if ($(".comment-input input").val() !== "") {
-            $new_comment = $("<p>").text($(".comment-input input").val());
+            $new_comment = $("<p>").text($(".comment-input_one input").val());
             $new_comment.hide();
-            $(".comments").append($new_comment);
+            $(".comments_one").append($new_comment);
             $new_comment.fadeIn();
-            $(".comment-input input").val("");
+            $(".comment-input_one input").val("");
         }
     };
 
-    $(".comment-input button").on("click", function (event) {
-        addCommentFromInputBox();
+    var addCommentFromInputBoxTwo = function () {
+        var $new_comment;
+
+        if ($(".comment-input input").val() !== "") {
+            $new_comment = $("<p>").text($(".comment-input_two input").val());
+            $new_comment.hide();
+            $(".comments_two").append($new_comment);
+            $new_comment.fadeIn();
+            $(".omment-input_two input").val("");
+        }
+    };
+
+    $(".comment-input_one button").on("click", function (event) {
+        addCommentFromInputBoxOne();
     });
 
-    $(".comment-input input").on("keypress", function (event) {
+    $(".comment-input_onet input").on("keypress", function (event) {
         if (event.keyCode === 13) {
-            addCommentFromInputBox();
+            addCommentFromInputBoxOne();
+        }
+    });
+
+    $(".comment-input_two button").on("click", function (event) {
+        addCommentFromInputBoxTwo();
+    });
+
+    $(".comment-input_two").on("keypress", function (event) {
+        if (event.keyCode === 13) {
+            addCommentFromInputBoxTwo();
         }
     });
 };
